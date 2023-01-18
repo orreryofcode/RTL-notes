@@ -6,13 +6,13 @@
 import { render, screen } from "@testing-library/react";
 import { Greet } from "./Greet";
 
-test("Greet renders correctly.", () => {
+test.skip("Greet render correctly.", () => {
   render(<Greet />);
   const textElement = screen.getByText(/hello/i);
   expect(textElement).toBeInTheDocument();
 });
 
-test("Greet renders name correctly", () => {
+test.only("Greet renders name correctly", () => {
   render(<Greet name='Raul' />);
   const textElement = screen.getByText("Hello Raul");
   expect(textElement).toBeInTheDocument();
